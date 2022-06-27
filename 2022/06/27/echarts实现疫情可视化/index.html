@@ -6,29 +6,30 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>echarts实现疫情可视化 | Hexo</title>
+  <title>echarts实现疫情可视化 | XQM&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="已实现的功能 地图下钻，国省市三级联动 疫情趋势可视化  安装echarts1npm i echarts  引入中国地图JS先把大佬的地图js拷贝下来 1git clone https:&#x2F;&#x2F;gitee.com&#x2F;MTrun&#x2F;echarts-map-json.git 1require(&quot;..&#x2F;..&#x2F;map-json&#x2F;country&#x2F;china.js&quot;); (如果是JSON文件) 1">
+  <meta name="description" content="这是显示在首页的概述，正文内容均会被隐藏。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="echarts实现疫情可视化">
 <meta property="og:url" content="http://example.com/2022/06/27/echarts%E5%AE%9E%E7%8E%B0%E7%96%AB%E6%83%85%E5%8F%AF%E8%A7%86%E5%8C%96/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="已实现的功能 地图下钻，国省市三级联动 疫情趋势可视化  安装echarts1npm i echarts  引入中国地图JS先把大佬的地图js拷贝下来 1git clone https:&#x2F;&#x2F;gitee.com&#x2F;MTrun&#x2F;echarts-map-json.git 1require(&quot;..&#x2F;..&#x2F;map-json&#x2F;country&#x2F;china.js&quot;); (如果是JSON文件) 1">
-<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="XQM&#39;s Blog">
+<meta property="og:description" content="这是显示在首页的概述，正文内容均会被隐藏。">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9452e5dc0db748068102db5ec23e1b17~tplv-k3u1fbpfcp-watermark.image">
 <meta property="og:image" content="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6d50487ea9f04f0b88fa89f7410611de~tplv-k3u1fbpfcp-watermark.image">
 <meta property="og:image" content="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/698827f64b584953aebb5d5464d27f1e~tplv-k3u1fbpfcp-watermark.image">
 <meta property="article:published_time" content="2022-06-27T04:55:12.000Z">
-<meta property="article:modified_time" content="2022-06-27T05:00:56.178Z">
-<meta property="article:author" content="John Doe">
-<meta property="article:tag" content="VUE Echarts">
+<meta property="article:modified_time" content="2022-06-27T06:08:47.159Z">
+<meta property="article:author" content="XQM">
+<meta property="article:tag" content="VUE">
+<meta property="article:tag" content="Echarts">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9452e5dc0db748068102db5ec23e1b17~tplv-k3u1fbpfcp-watermark.image">
   
-    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="XQM&#39;s Blog" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.png">
+    <link rel="icon" href="/favicon.ico">
   
   <link rel="stylesheet" type="text/css" href="/./main.0cf68a.css">
   <style type="text/css">
@@ -64,7 +65,7 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+				<li><a href="/categories">分类</a></li>
 	        
 			</ul>
 		</nav>
@@ -86,13 +87,11 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
+					<a class="github" target="_blank" href="https://github.com/00happy" title="github"><i class="icon-github"></i></a>
 		        
-					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+					<a class="qq" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2018685189&site=https://00happy.github.io/&menu=yes" title="qq"><i class="icon-qq"></i></a>
 		        
-					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-		        
-					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+					<a class="mail" target="_blank" href="mailto:xqm20000317@163.com" title="mail"><i class="icon-mail"></i></a>
 		        
 			</div>
 		</nav>
@@ -127,13 +126,11 @@
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
+						<a class="github" target="_blank" href="https://github.com/00happy" title="github"><i class="icon-github"></i></a>
 			        
-						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+						<a class="qq" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2018685189&site=https://00happy.github.io/&menu=yes" title="qq"><i class="icon-qq"></i></a>
 			        
-						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-			        
-						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+						<a class="mail" target="_blank" href="mailto:xqm20000317@163.com" title="mail"><i class="icon-mail"></i></a>
 			        
 				</div>
 			</nav>
@@ -144,7 +141,7 @@
 				
 					<li style="width: 50%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+					<li style="width: 50%"><a href="/categories">分类</a></li>
 		        
 				</ul>
 			</nav>
@@ -162,27 +159,31 @@
             <article id="post-echarts实现疫情可视化" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
-      <header class="article-header">
-        
+      <header class=" article-header">
+  
   
     <h1 class="article-title" itemprop="name">
       echarts实现疫情可视化
     </h1>
   
 
-        
-        <a href="/2022/06/27/echarts%E5%AE%9E%E7%8E%B0%E7%96%AB%E6%83%85%E5%8F%AF%E8%A7%86%E5%8C%96/" class="archive-article-date">
+  
+  <a href="/2022/06/27/echarts%E5%AE%9E%E7%8E%B0%E7%96%AB%E6%83%85%E5%8F%AF%E8%A7%86%E5%8C%96/" class="archive-article-date">
   	<time datetime="2022-06-27T04:55:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-06-27</time>
 </a>
-        
-      </header>
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="已实现的功能"><a href="#已实现的功能" class="headerlink" title="已实现的功能"></a>已实现的功能</h1><ul>
+
+    
+    <h1 id="已实现的功能"><a href="#已实现的功能" class="headerlink" title="已实现的功能"></a>已实现的功能</h1><ul>
 <li>地图下钻，国省市三级联动</li>
 <li>疫情趋势可视化</li>
 </ul>
+<span id="more"></span>
+
 <h2 id="安装echarts"><a href="#安装echarts" class="headerlink" title="安装echarts"></a>安装echarts</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i echarts</span><br></pre></td></tr></table></figure>
 
 <h1 id="引入中国地图JS"><a href="#引入中国地图JS" class="headerlink" title="引入中国地图JS"></a>引入中国地图JS</h1><p>先把大佬的地图js拷贝下来</p>
@@ -215,51 +216,45 @@
 
 
 
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+    
+    
+  </div>
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">VUE Echarts</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">VUE</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Echarts</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+    
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/web前端//" class="article-tag-list-link color1">web前端</a>
+        		</li>
+      		
+		</ul>
+	</div>
 
-      
 
-      
-        
+    
+
+    
+    
 <div class="share-btn share-icons tooltip-left">
   <div class="tooltip tooltip-east">
     <span class="tooltip-item">
@@ -309,13 +304,13 @@
 </div>
 
 <div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
 
-  
+
 <nav id="article-nav">
   
   
@@ -345,15 +340,35 @@
 
 
 
-  
-  
-  
 
-  
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="echarts实现疫情可视化" data-title="echarts实现疫情可视化" data-url="http://example.com/2022/06/27/echarts%E5%AE%9E%E7%8E%B0%E7%96%AB%E6%83%85%E5%8F%AF%E8%A7%86%E5%8C%96/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
-  
 
-  
+
+
+
+
+
+
+
+
 
 
           </div>
@@ -450,7 +465,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">VUE Echarts</a>
+                <a href="javascript:void(0)" class="js-tag color3">Echarts</a>
               </li>
             
             <div class="clearfix"></div>
@@ -533,7 +548,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">学海无涯</div>
   	  	
     	</section>
     

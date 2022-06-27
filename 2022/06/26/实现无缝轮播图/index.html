@@ -6,29 +6,29 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>实现无缝轮播图 | Hexo</title>
+  <title>实现无缝轮播图 | XQM&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="前言最近在项目中遇到了轮播图的需求，以往都是直接上框架就完事了。但想想自己还是应该多练练手  思路 确立样式 父容器限制宽高，超出部分隐藏，设置为弹性布局 子容器利用 flex-shrink: 0 保证容器不被缩小 加上左移，右移按钮和轮播图指示器      图片滚动 设置一个滚动变量currentIndex(从0开始)，表示当前展示的是第几张 设置setInterval让滚动变量自增，并在生命周">
 <meta property="og:type" content="article">
 <meta property="og:title" content="实现无缝轮播图">
 <meta property="og:url" content="http://example.com/2022/06/26/%E5%AE%9E%E7%8E%B0%E6%97%A0%E7%BC%9D%E8%BD%AE%E6%92%AD%E5%9B%BE/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="XQM&#39;s Blog">
 <meta property="og:description" content="前言最近在项目中遇到了轮播图的需求，以往都是直接上框架就完事了。但想想自己还是应该多练练手  思路 确立样式 父容器限制宽高，超出部分隐藏，设置为弹性布局 子容器利用 flex-shrink: 0 保证容器不被缩小 加上左移，右移按钮和轮播图指示器      图片滚动 设置一个滚动变量currentIndex(从0开始)，表示当前展示的是第几张 设置setInterval让滚动变量自增，并在生命周">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/32500c0421734745b1563217d61a068a~tplv-k3u1fbpfcp-watermark.image">
 <meta property="og:image" content="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9e5df7e6284941b986176932e8aec1e4~tplv-k3u1fbpfcp-watermark.image">
 <meta property="og:image" content="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6534a30a3abb49df9b665437cbc1b050~tplv-k3u1fbpfcp-watermark.image">
 <meta property="article:published_time" content="2022-06-26T05:17:26.000Z">
-<meta property="article:modified_time" content="2022-06-27T04:58:43.436Z">
-<meta property="article:author" content="John Doe">
+<meta property="article:modified_time" content="2022-06-27T06:08:52.516Z">
+<meta property="article:author" content="XQM">
 <meta property="article:tag" content="VUE">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/32500c0421734745b1563217d61a068a~tplv-k3u1fbpfcp-watermark.image">
   
-    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="XQM&#39;s Blog" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.png">
+    <link rel="icon" href="/favicon.ico">
   
   <link rel="stylesheet" type="text/css" href="/./main.0cf68a.css">
   <style type="text/css">
@@ -64,7 +64,7 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+				<li><a href="/categories">分类</a></li>
 	        
 			</ul>
 		</nav>
@@ -86,13 +86,11 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
+					<a class="github" target="_blank" href="https://github.com/00happy" title="github"><i class="icon-github"></i></a>
 		        
-					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+					<a class="qq" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2018685189&site=https://00happy.github.io/&menu=yes" title="qq"><i class="icon-qq"></i></a>
 		        
-					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-		        
-					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+					<a class="mail" target="_blank" href="mailto:xqm20000317@163.com" title="mail"><i class="icon-mail"></i></a>
 		        
 			</div>
 		</nav>
@@ -127,13 +125,11 @@
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
+						<a class="github" target="_blank" href="https://github.com/00happy" title="github"><i class="icon-github"></i></a>
 			        
-						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+						<a class="qq" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2018685189&site=https://00happy.github.io/&menu=yes" title="qq"><i class="icon-qq"></i></a>
 			        
-						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-			        
-						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+						<a class="mail" target="_blank" href="mailto:xqm20000317@163.com" title="mail"><i class="icon-mail"></i></a>
 			        
 				</div>
 			</nav>
@@ -144,7 +140,7 @@
 				
 					<li style="width: 50%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+					<li style="width: 50%"><a href="/categories">分类</a></li>
 		        
 				</ul>
 			</nav>
@@ -162,24 +158,26 @@
             <article id="post-实现无缝轮播图" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
-      <header class="article-header">
-        
+      <header class=" article-header">
+  
   
     <h1 class="article-title" itemprop="name">
       实现无缝轮播图
     </h1>
   
 
-        
-        <a href="/2022/06/26/%E5%AE%9E%E7%8E%B0%E6%97%A0%E7%BC%9D%E8%BD%AE%E6%92%AD%E5%9B%BE/" class="archive-article-date">
+  
+  <a href="/2022/06/26/%E5%AE%9E%E7%8E%B0%E6%97%A0%E7%BC%9D%E8%BD%AE%E6%92%AD%E5%9B%BE/" class="archive-article-date">
   	<time datetime="2022-06-26T05:17:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-06-26</time>
 </a>
-        
-      </header>
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><pre><code>最近在项目中遇到了轮播图的需求，以往都是直接上框架就完事了。但想想自己还是应该多练练手
+
+    
+    <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><pre><code>最近在项目中遇到了轮播图的需求，以往都是直接上框架就完事了。但想想自己还是应该多练练手
 </code></pre>
 <h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><ol>
 <li>确立样式<ul>
@@ -198,6 +196,7 @@
 </ul>
 </li>
 </ol>
+<span id="more"></span>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">transStyle()&#123;</span><br><span class="line">    return `transform:translateX($&#123;-this.currentIndex*this.itemWidth&#125;px)`</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ol start="3">
 <li>无缝滚动<ul>
@@ -211,34 +210,13 @@
 <h1 id="js"><a href="#js" class="headerlink" title="js"></a><code>js</code></h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">import &#123; onMounted, reactive, toRefs &#125; from &quot;vue&quot;;</span><br><span class="line">export default &#123;</span><br><span class="line">  props: &#123;</span><br><span class="line">    swipe: &#123;</span><br><span class="line">      type: Array,</span><br><span class="line">      default() &#123;</span><br><span class="line">        return [1, 2, 3, 4];</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  setup(props) &#123;</span><br><span class="line">    const state = reactive(&#123;</span><br><span class="line">      currentIndex: 0, //滚动变量</span><br><span class="line">      autoTime: 2000, //自动播放间隔时长</span><br><span class="line">      wrapperWidth: 860, //整个父容器宽度</span><br><span class="line">      itemWidth: 430, //子容器宽度+外边距</span><br><span class="line">    &#125;);</span><br><span class="line">    const onHandle = (e) =&gt; &#123;</span><br><span class="line">      state.currentIndex = e;</span><br><span class="line">    &#125;;</span><br><span class="line">    const leftMove = () =&gt; &#123;</span><br><span class="line">      if (state.currentIndex == 0) &#123;</span><br><span class="line">        state.currentIndex = props.swipe.length - 1;</span><br><span class="line">        return;</span><br><span class="line">      &#125;</span><br><span class="line">      state.currentIndex--;</span><br><span class="line">    &#125;;</span><br><span class="line">    const rightMove = () =&gt; &#123;</span><br><span class="line">      if (state.currentIndex &gt;= props.swipe.length) return;</span><br><span class="line">      state.currentIndex++;</span><br><span class="line">    &#125;;</span><br><span class="line">    const autoMove = () =&gt; &#123;</span><br><span class="line">      setInterval(() =&gt; &#123;</span><br><span class="line">        state.currentIndex++;</span><br><span class="line">        if (state.currentIndex &gt;= props.swipe.length) &#123;</span><br><span class="line">          state.currentIndex = 0;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;, state.autoTime);</span><br><span class="line">    &#125;;</span><br><span class="line">    onMounted(() =&gt; &#123;</span><br><span class="line">      autoMove();</span><br><span class="line">    &#125;);</span><br><span class="line">    return &#123;</span><br><span class="line">      autoMove,</span><br><span class="line">      onHandle,</span><br><span class="line">      rightMove,</span><br><span class="line">      leftMove,</span><br><span class="line">      ...toRefs(state),</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">  computed: &#123;</span><br><span class="line">    transStyle() &#123;</span><br><span class="line">      return `transform:translateX($&#123;-this.currentIndex * this.itemWidth&#125;px)`;</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 <h1 id="css"><a href="#css" class="headerlink" title="css"></a><code>css</code></h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line">&lt;style lang=&quot;less&quot; scoped&gt;</span><br><span class="line">.swipe-wrap &#123;</span><br><span class="line">  position: relative;</span><br><span class="line">  .swipe &#123;</span><br><span class="line">    width: 980px;</span><br><span class="line">    .icon-left &#123;</span><br><span class="line">      display: none;</span><br><span class="line">      position: absolute;</span><br><span class="line">      font-size: 50px;</span><br><span class="line">      top: 31%;</span><br><span class="line">      left: -33px;</span><br><span class="line">      z-index: 1000;</span><br><span class="line">    &#125;</span><br><span class="line">    .icon-right &#123;</span><br><span class="line">      display: none;</span><br><span class="line">      position: absolute;</span><br><span class="line">      font-size: 50px;</span><br><span class="line">      top: 31%;</span><br><span class="line">      right: -10px;</span><br><span class="line">    &#125;</span><br><span class="line">    i:hover &#123;</span><br><span class="line">      display: block;</span><br><span class="line">      color: aquamarine;</span><br><span class="line">    &#125;</span><br><span class="line">    .viewWrapper &#123;</span><br><span class="line">      display: flex;</span><br><span class="line"></span><br><span class="line">      width: 860px;</span><br><span class="line">      overflow: hidden;</span><br><span class="line">      .item &#123;</span><br><span class="line">        margin: 30px 15px;</span><br><span class="line">        width: 400px;</span><br><span class="line">        height: 200px;</span><br><span class="line">        flex-shrink: 0;</span><br><span class="line">        img &#123;</span><br><span class="line">          width: 100%;</span><br><span class="line">          border-radius: 10px;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    .point-wrapper &#123;</span><br><span class="line">      position: absolute;</span><br><span class="line">      bottom: 12%;</span><br><span class="line">      left: 40%;</span><br><span class="line">      display: flex;</span><br><span class="line">      .circle &#123;</span><br><span class="line">        width: 10px;</span><br><span class="line">        height: 10px;</span><br><span class="line">        border-radius: 50%;</span><br><span class="line">        margin-left: 20px;</span><br><span class="line">        background-color: #969799;</span><br><span class="line">      &#125;</span><br><span class="line">      .active &#123;</span><br><span class="line">        background-color: #111;</span><br><span class="line">      &#125;</span><br><span class="line">      .circle:hover &#123;</span><br><span class="line">        background-color: #07c1608c;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  .swipe:hover &#123;</span><br><span class="line">    i &#123;</span><br><span class="line">      display: block;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
 
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+    
+    
+  </div>
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -250,12 +228,23 @@
 		</ul>
 	</div>
 
-      
+    
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/web前端//" class="article-tag-list-link color1">web前端</a>
+        		</li>
+      		
+		</ul>
+	</div>
 
-      
 
-      
-        
+    
+
+    
+    
 <div class="share-btn share-icons tooltip-left">
   <div class="tooltip tooltip-east">
     <span class="tooltip-item">
@@ -305,13 +294,13 @@
 </div>
 
 <div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
 
-  
+
 <nav id="article-nav">
   
     <a href="/2022/06/27/echarts%E5%AE%9E%E7%8E%B0%E7%96%AB%E6%83%85%E5%8F%AF%E8%A7%86%E5%8C%96/" id="article-nav-newer" class="article-nav-link-wrap">
@@ -345,15 +334,35 @@
 
 
 
-  
-  
-  
 
-  
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="实现无缝轮播图" data-title="实现无缝轮播图" data-url="http://example.com/2022/06/26/%E5%AE%9E%E7%8E%B0%E6%97%A0%E7%BC%9D%E8%BD%AE%E6%92%AD%E5%9B%BE/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
-  
 
-  
+
+
+
+
+
+
+
+
 
 
           </div>
@@ -450,7 +459,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">VUE Echarts</a>
+                <a href="javascript:void(0)" class="js-tag color3">Echarts</a>
               </li>
             
             <div class="clearfix"></div>
@@ -533,7 +542,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">学海无涯</div>
   	  	
     	</section>
     
