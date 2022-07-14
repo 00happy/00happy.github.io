@@ -6,17 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Tag: Echarts | XQM&#39;s Blog</title>
+  <title>js数据结构 | XQM&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一个博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="XQM&#39;s Blog">
-<meta property="og:url" content="http://example.com/tags/Echarts/index.html">
+  <meta name="description" content="数据类型的判断 typeof typeof是经常使用的一种数据判断方式,可以准确判断基本数据类型(除了null,会被判断为Object),因为在早期的js中,数据类型是根据机器码的前三位来判断的,前三位为0的就是Object,而null正好全部位数都为0.    typeof除了判断函数正确,其余都会被判断为Objcet.所以一般用来判断基本数据类型.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js数据结构">
+<meta property="og:url" content="http://example.com/2022/07/14/js%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/index.html">
 <meta property="og:site_name" content="XQM&#39;s Blog">
-<meta property="og:description" content="一个博客">
+<meta property="og:description" content="数据类型的判断 typeof typeof是经常使用的一种数据判断方式,可以准确判断基本数据类型(除了null,会被判断为Object),因为在早期的js中,数据类型是根据机器码的前三位来判断的,前三位为0的就是Object,而null正好全部位数都为0.    typeof除了判断函数正确,其余都会被判断为Objcet.所以一般用来判断基本数据类型.">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/%5Cimage-20220713155114910.png">
+<meta property="article:published_time" content="2022-07-14T09:23:27.000Z">
+<meta property="article:modified_time" content="2022-07-14T09:54:12.312Z">
 <meta property="article:author" content="XQM">
+<meta property="article:tag" content="js">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/%5Cimage-20220713155114910.png">
   
     <link rel="alternative" href="/atom.xml" title="XQM&#39;s Blog" type="application/atom+xml">
   
@@ -148,52 +153,139 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-js数据结构" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class=" article-header">
   
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/06/27/echarts%E5%AE%9E%E7%8E%B0%E7%96%AB%E6%83%85%E5%8F%AF%E8%A7%86%E5%8C%96/" class="archive-article-date">
-  	<time datetime="2022-06-27T04:55:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-06-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/06/27/echarts%E5%AE%9E%E7%8E%B0%E7%96%AB%E6%83%85%E5%8F%AF%E8%A7%86%E5%8C%96/">echarts实现疫情可视化</a>
+    <h1 class="article-title" itemprop="name">
+      js数据结构
     </h1>
   
 
-        <div class="article-info info-on-right">
+  
+  <a href="/2022/07/14/js%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="archive-article-date">
+  	<time datetime="2022-07-14T09:23:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-14</time>
+</a>
+  
+  <!-- 需要添加的位置 -->
+        <!-- 开始添加字数统计-->
+        
+          <div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-keyboard-o"></i>
+      <span class="post-meta-item-text">  字数统计: </span>
+      <span class="post-count">935字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="fa fa-hourglass-half"></i>
+      <span class="post-meta-item-text">  阅读时长: </span>
+      <span class="post-count">3分</span>
+    </span>
+  </span>
+</div>
+
           
+        <!-- 添加完成 -->
+      <!-- 添加代码 -->
+      
+        <span class="archive-article-date">
+            阅读量 <span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+        
+
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+
+    
+    <h1 id="数据类型的判断"><a href="#数据类型的判断" class="headerlink" title="数据类型的判断"></a>数据类型的判断</h1><ol>
+<li><p>typeof</p>
+<p>typeof是经常使用的一种数据判断方式,可以准确判断基本数据类型(除了null,会被判断为Object),因为在早期的js中,数据类型是根据机器码的前三位来判断的,前三位为0的就是Object,而null正好全部位数都为0.    typeof除了判断函数正确,其余都会被判断为Objcet.所以一般用来判断基本数据类型.</p>
+</li>
+</ol>
+<span id="more"></span>
+<ol start="2">
+<li><p>instanceof</p>
+<p>instanceof用来判断引用类型,因为他的原理是根据原型链来查找左侧实例的( <code>__proto__ </code>)与右侧的(<code>prototype</code>)是否是相等的,直到查找到相等的或者原型为null,所以并不能用来判断基本类型.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">myInstanceof</span>(<span class="params">left,right</span>)&#123;</span><br><span class="line">  <span class="comment">// if(!left) return false</span></span><br><span class="line">  <span class="comment">// if(left.__proto__==right.prototype) return true</span></span><br><span class="line">  <span class="comment">// else&#123;</span></span><br><span class="line">  <span class="comment">//   return myInstanceof(left.__proto__,right)</span></span><br><span class="line">  <span class="comment">// &#125;</span></span><br><span class="line">  <span class="keyword">let</span> leftValue = left.<span class="property">__proto__</span></span><br><span class="line">  <span class="keyword">let</span> rightValue = right.<span class="property"><span class="keyword">prototype</span></span></span><br><span class="line">  <span class="keyword">while</span>(<span class="number">1</span>)&#123;</span><br><span class="line">    <span class="keyword">if</span>(leftValue===<span class="literal">null</span>) <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">    <span class="keyword">if</span>(leftValue==rightValue) <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">    leftValue=leftValue.<span class="property">__proto__</span></span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> obj = []</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">myInstanceof</span>(obj,<span class="title class_">Object</span>));</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>constructor</p>
+<p>constructor可以获取变量的构造函数,能判断绝大多数的类型,没有构造函数的就判断不了(null,undefined,Object.create(null)…)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&quot;1&quot;.constructor===String</span><br><span class="line">&quot;1&quot;.constructor.name//&quot;String&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Object.prototype.toString.call()</p>
+<p>利用call方法改变this指向,借用对象原型上的toString(),可以判断所有类型</p>
+<p><img src="/%5Cimage-20220713155114910.png" alt="image-20220713155114910"></p>
+<p>ps:顺便记录下所有类型原型上的toString()</p>
+<ul>
+<li><p>Number.prototype.toString(radix)</p>
+<p>radix(2~36),代表这个数字的进制,超出会报RangeError</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> count = <span class="number">10</span></span><br><span class="line">count.<span class="title function_">toString</span>()<span class="comment">//&#x27;10&#x27;</span></span><br><span class="line">count.<span class="title function_">toString</span>(<span class="number">2</span>)<span class="comment">//&#x27;1010&#x27;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>String.prototype.toString()</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">&quot;Hello world&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="title function_">alert</span>(x.<span class="title function_">toString</span>())      <span class="comment">// 输出 &quot;Hello world&quot;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Array.prototype.toString()</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> array1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;1a&#x27;</span>];</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(array1.<span class="title function_">toString</span>());</span><br><span class="line"><span class="comment">// expected output: &quot;1,2,a,1a&quot;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Function.prototype.toString()</p>
+<p>返回表示函数源代码的字符串</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">sum</span>(<span class="params">a, b</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(sum.<span class="title function_">toString</span>());</span><br><span class="line"><span class="comment">// expected output: &quot;function sum(a, b) &#123;</span></span><br><span class="line"><span class="comment">//                     return a + b;</span></span><br><span class="line"><span class="comment">//                   &#125;&quot;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+<h1 id="为什么0-1-0-2！-x3D-x3D-0-3"><a href="#为什么0-1-0-2！-x3D-x3D-0-3" class="headerlink" title="为什么0.1+0.2！&#x3D;&#x3D;0.3"></a>为什么0.1+0.2！&#x3D;&#x3D;0.3</h1><p>在js中没有整数的概念，都是浮点数.而计算机运算时，会把数字转换为二进制.浮点数转为二进制可能会产生无限循环小数(乘以2，取整数位),Number类型遵守IEEE754标准,总共64位,1位符号位(0表正,1表负)，11位指数位,52位尾数位，超出的会被截断,进1舍0。</p>
+<p>解决办法：</p>
+<ul>
+<li>toFixed()</li>
+<li>自定义函数(把小数放大为整数再进行计算)</li>
+<li>自定义函数(设置误差,相减的绝对值没超过2的负52次方)</li>
+</ul>
+<h1 id="isNaN-和Number-isNaN-的区别"><a href="#isNaN-和Number-isNaN-的区别" class="headerlink" title="isNaN()和Number.isNaN()的区别"></a>isNaN()和Number.isNaN()的区别</h1><ul>
+<li>isNaN()会进行类型转换,如果能转换为数字,就返回true，判断不准确</li>
+<li>Number.isNaN()先判断是否为number类型(NaN也是number类型),不是就返回false，是的话就在判断是否为NaN,不会进行数据类型转换</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="built_in">isNaN</span>(<span class="title class_">NaN</span>)) <span class="comment">//true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="built_in">isNaN</span>(<span class="string">&quot;123&quot;</span>)); <span class="comment">//false</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="built_in">isNaN</span>(<span class="string">&quot;NaN&quot;</span>)); <span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Number</span>.<span class="built_in">isNaN</span>(<span class="title class_">NaN</span>)); <span class="comment">//true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Number</span>.<span class="built_in">isNaN</span>(<span class="string">&quot;123&quot;</span>)); <span class="comment">//false</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Number</span>.<span class="built_in">isNaN</span>(<span class="string">&quot;NaN&quot;</span>)); <span class="comment">//false</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="x3D-x3D-类型转换的规则"><a href="#x3D-x3D-类型转换的规则" class="headerlink" title="&#x3D;&#x3D;类型转换的规则"></a>&#x3D;&#x3D;类型转换的规则</h1><ol>
+<li>如果数据类型相同，返回true</li>
+<li>如果是null和undef，返回true</li>
+<li>如果是number和string，把string转为number</li>
+<li>如果是number和boolean，把boolean转为number</li>
+<li>如果一方是object，另一方是string number symbol，把object–&gt; 原始类型。</li>
+</ol>
+<h1 id="强制类型转换的规则"><a href="#强制类型转换的规则" class="headerlink" title="强制类型转换的规则"></a>强制类型转换的规则</h1><p>（1）其他值–&gt;字符串：Null、Undefined、Boolean、Number、Symbol都是直接转换为字符串，加上双引号，对于普通对象来说，一般会用toString()转换为内部属性[[Class]]的值；</p>
+<p>（2）其他值–&gt;数字值：①Undefined类型的值转换为NaN，Null类型转换为0，true为1，false为0，String如果包含非数字就为NaN，否则为数字，空字符串为0，Symbol会报错；</p>
+<p>（3）其他值–&gt;布尔值：false值包括（undefined,null,false,+0,-0,NaN,“”）,其他值都是真值。</p>
+
+    
+    
+  </div>
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">VUE</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Echarts</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+    
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -206,19 +298,90 @@
 	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
     
 
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
 
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/07/14/js%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+  
+    <section id="comments" style="margin:10px;padding:10px;background:#fff;">
+      <div id="vcomment" class="comment"></div> 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+    window.onload = function() {
+        new Valine({
+            el: '.comment',
+            notify: notify,
+            verify: verify,
+            app_id: "CuoYNyIb7MJvXKev559LSPd5-gzGzoHsz",
+            app_key: "ov7GdAd3oveBrL5GfvaMWpck",
+            placeholder: "Just go go",
+            avatar:"mm"
+        });
+    }
+</script>
+    </section>
+  
+</article>
+
+  
+
+ 
           </div>
         </div>
       </div>
@@ -246,9 +409,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
